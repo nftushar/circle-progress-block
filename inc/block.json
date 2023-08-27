@@ -1,0 +1,77 @@
+{
+  "apiVersion": "1",
+  "name": "b-blocks/circle-progress",
+  "title": "Circle Progress",
+  "description": "Gutenberg editing with easy-to-use, responsive circle-progress  more.",
+  "category": "media",
+  "keywords": ["circle-progress", "Circle", "Progress", "Gutenberg"],
+  "textdomain": "circle-progress",
+
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": ""
+    },
+    "cId": {
+      "type": "string",
+      "default": ""
+    },
+    "value": {
+      "type": "number",
+      "default": 0
+    },
+    "size": {
+      "type": "number",
+      "default": 100
+    },
+    "startAngle": {
+      "type": "number",
+      "default": -3.141592653589793
+    },
+    "reverse": {
+      "type": "boolean",
+      "default": false
+    },
+    "thickness": {
+      "type": ["string"],
+      "default": "auto"
+    },
+    "lineCap": {
+      "type": "string",
+      "default": "butt"
+    },
+    "fill": {
+      "type": "object",
+      "default": {
+        "gradient": ["#3aeabb", "#fdd250"]
+      }
+    },
+    "emptyFill": {
+      "type": "string",
+      "default": "rgba(0, 0, 0, .1)"
+    },
+    "animation": {
+      "type": "object",
+      "default": {
+        "duration": 1200,
+        "easing": "circleProgressEasing",
+		"startAt": 0
+      }
+    },
+    "insertMode": {
+      "type": "string",
+      "default": "prepend"
+    }
+  },
+  "example": {
+    "attributes": {
+      "preview": true,
+      "columns": {
+        "desktop": 1,
+        "tablet": 1,
+        "mobile": 1
+      }
+    }
+  },
+  "editorScript": "file:../dist/editor.js"
+}

@@ -1,0 +1,53 @@
+$primaryColor: #4527a4;
+
+html {
+	scroll-behavior: smooth;
+}
+
+.wp-block-b-blocks-star-rating {
+	* {
+		box-sizing: border-box;
+	}
+
+	.bBlocksRating {
+		display: flex;
+		// align-items: center;
+		// justify-content: right;
+		// gap: 10px;
+		.stars {
+			display: flex;
+			align-items: center;
+
+			.star {
+				display: inline-block;
+				position: relative;
+				width: 20px;
+				height: 20px;
+				overflow: hidden;
+
+				> * {
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+
+				svg {
+					fill: #ccd6df;
+				}
+
+				.starFill {
+					width: 0px;
+					overflow: hidden;
+
+					svg {
+						width: 20px;
+						height: 100%;
+						fill: #f0ad4e;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+export const getArrFromNum = num => Array.from({ length: num }, (_, index) => index + 1)

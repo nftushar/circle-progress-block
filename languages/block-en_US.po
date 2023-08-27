@@ -1,0 +1,96 @@
+# Copyright (C) 2023 bPlugins LLC
+# This file is distributed under the GPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Circle Progress 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/circle-progress\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-08-07T04:57:39+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: circle-progress\n"
+
+#. Plugin Name of the plugin
+msgid "Circle Progress"
+msgstr ""
+
+#. Description of the plugin
+msgid "circleProgress Gutenberg plugin: Streamline Gutenberg editing with easy-to-use, responsive circleProgress  and more.."
+msgstr ""
+
+#. Author of the plugin
+msgid "bPlugins LLC"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://bplugins.com"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Settings"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Prefix"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Rating"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Icon Style"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Title"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Gap"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Alignment"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Text Color"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Text Typography"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Text Shadow"
+msgstr ""
+
+#: inc/block.json
+msgctxt "block title"
+msgid "Circle Progress"
+msgstr ""
+
+#: inc/block.json
+msgctxt "block description"
+msgid "Gutenberg editing with easy-to-use, responsive circle-progress  more."
+msgstr ""
+
+#: inc/block.json
+msgctxt "block keyword"
+msgid "circle-progress"
+msgstr ""
+
+#: inc/block.json
+msgctxt "block keyword"
+msgid "Rating"
+msgstr ""
+
+#: inc/block.json
+msgctxt "block keyword"
+msgid "Gutenberg"
+msgstr ""
