@@ -1,37 +1,38 @@
+
 import { getMultiShadowCSS, getTypoCSS } from "../../Components/utils/getCSS";
 import { getArrFromNum } from "./utils/functions";
 
 const Style = ({ attributes, clientId }) => {
-    const { rating, gap, alignment, textTypo, textColor, textShadow } = attributes;
+    const { gap, alignment, textTypo, textColor, textShadow } = attributes;
 
-    const ratingSl = `#bBlocksRating-${clientId} .bBlocksRating`;
-    const starSl = `${ratingSl} .stars .star`;
-    const intAndDec = (rating + '').split('.');
-    const ratingInt = parseInt(intAndDec[0]);
-    const ratingDec = parseInt(intAndDec[1] || 0);
- 
+    const circleSl = `#bBlocksCircle-${clientId} .bBlocksCircle`;
+    const starSl = `${circleSl} .stars .star`;
+    const intAndDec = [].split('.');
+    const circleInt = parseInt(intAndDec[0]);
+    const circleDec = parseInt(intAndDec[1] || 0);
+
     return <style dangerouslySetInnerHTML={{
         __html: `
         ${getTypoCSS(``, textTypo)?.googleFontLink}
-        ${getTypoCSS(`${ratingSl} .ratingPrefix`, textTypo)?.styles}
+        ${getTypoCSS(`${circleSl} .circlePrefix`, textTypo)?.styles}
 
-          ${ratingSl} {
+          ${circleSl} {
             justify-content: ${alignment};
             gap: ${gap};
             color: ${textColor}; 
           }
 
-          ${ratingSl} .ratingPrefix{
+          ${circleSl} .circlePrefix{
             text-shadow: ${getMultiShadowCSS(textShadow, 'text')}
           }
 
-        ${getArrFromNum(ratingInt).map((index) => `${starSl}:nth-child(${index}) .starFill`).join(', ')}{
+        ${getArrFromNum(circleInt).map((index) => `${starSl}:nth-child(${index}) .starFill`).join(', ')}{
             width: 100%;
         }
 
-        ${starSl}:nth-child(${ratingInt + 1}) .starFill{
+        ${starSl}:nth-child(${circleInt + 1}) .starFill{
             width: ${(() => {
-                switch (ratingDec) {
+                switch (circleDec) {
                     case 1:
                         return 25;
                     case 2:

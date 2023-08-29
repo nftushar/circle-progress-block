@@ -15,5 +15,6 @@ if ( !defined( 'ABSPATH' ) ) { exit; }
 // Constant
 define( 'B_BLOCKS_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.7.8' );
 define( 'B_BLOCKS_DIR_URL', plugin_dir_url( __FILE__ ) );
+define( 'B_BLOCKS_DIR_PATH', plugin_dir_path( __FILE__ ) );
 
-require_once plugin_dir_path( __FILE__ ) . 'inc/block.php';
+require_once B_BLOCKS_DIR_PATH . 'inc/block.php';

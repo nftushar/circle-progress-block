@@ -16,9 +16,13 @@
       "type": "string",
       "default": ""
     },
+    "alignment": {
+      "type": "string",
+      "default": "center"
+    },
     "value": {
       "type": "number",
-      "default": 0
+      "default": 1
     },
     "size": {
       "type": "number",
@@ -33,7 +37,7 @@
       "default": false
     },
     "thickness": {
-      "type": ["string"],
+      "type": "string",
       "default": "auto"
     },
     "lineCap": {
@@ -43,19 +47,24 @@
     "fill": {
       "type": "object",
       "default": {
-        "gradient": ["#3aeabb", "#fdd250"]
+        "gradient": ["red", "orange"]
       }
+    },
+    "circleScale": {
+      "type": "number",
+      "default": "100%"
     },
     "emptyFill": {
       "type": "string",
-      "default": "rgba(0, 0, 0, .1)"
+      "default": "#000001"
     },
     "animation": {
       "type": "object",
       "default": {
+        "enabled": true,
         "duration": 1200,
         "easing": "circleProgressEasing",
-		"startAt": 0
+        "startAt": 0
       }
     },
     "insertMode": {
