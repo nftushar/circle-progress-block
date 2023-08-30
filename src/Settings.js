@@ -2,29 +2,23 @@ import { __ } from "@wordpress/i18n";
 import { InspectorControls } from "@wordpress/block-editor";
 import { solidStar, outlineStar } from "./utils/icons";
 import produce from "immer";
-import {
-  PanelBody, TabPanel, TextControl, SelectControl, RangeControl, __experimentalUnitControl as UnitControl,
-} from "@wordpress/components";
+import { ToggleControl, PanelRow, PanelBody, TabPanel, TextControl, __experimentalNumberControl as NumberControl, SelectControl, RangeControl, __experimentalUnitControl as UnitControl } from "@wordpress/components";
 
-import {
-  BColor, BtnGroup, Label, MultiShadowControl, Typography,
-} from "../../Components";
+import { BColor, BtnGroup, Label, MultiShadowControl, Typography, } from "../../Components";
 import { emUnit, pxUnit } from "../../Components/utils/options";
-import { ToggleControl } from "@wordpress/components";
 
-const easingOptions = [
-  { label: __("Circle Progress Easing", "circle"), value: "solid" },
-  { label: __("Circle Progress Easing 2", "circle"), value: "outline" },
+const lineCapOptions = [
+  { label: __("Round", "circle-progress"), value: "round" },
+  { label: __("butt", "circle-progress"), value: "butt" },
+  { label: __("square", "circle-progress"), value: "square" },
 ];
 
-
-
 const circleAlignments = [
-  { label: __("left", "circle"), value: "left", icon: "editor-alignleft" },
+  { label: __("left", "circle-progress"), value: "left", icon: "editor-alignleft" },
   {
-    label: __("center", "circle"), value: "center", icon: "editor-aligncenter",
+    label: __("center", "circle-progress"), value: "center", icon: "editor-aligncenter",
   },
-  { label: __("right", "circle"), value: "right", icon: "editor-alignright" },
+  { label: __("right", "circle-progress"), value: "right", icon: "editor-alignright" },
 ];
 
 const Settings = ({ attributes, setAttributes }) => {
@@ -45,30 +39,49 @@ const Settings = ({ attributes, setAttributes }) => {
         {(tab) => (
           <>
             {tab.name === "general" && (
-              <PanelBody
-                className="bPlPanelBody"
-                title={__("Settings", "circle-progress")}
-              >
-                <Label>{__('duration:', 'shape-divider')}</Label>
-                <RangeControl value={duration} onChange={val => setAttributes({ duration: val })} min={100} max={300} />
+              <PanelBody className="bPlPanelBody" title={__("Circle Progress", "circle-progress")}>
+                <Label className='mb5'>{__('Value (%):', 'circle-progress')}</Label>
+                <RangeControl value={parseInt(value * 100)} onChange={val => setAttributes({ value: Number((val / 100).toFixed(2)) })} min={0} max={100} step={1} />
 
-                <Label>{__('Size:', 'shape-divider')}</Label>
-                <RangeControl value={size} onChange={val => setAttributes({ size: val })} min={100} max={300} />
-                
-                <ToggleControl
-                  label="Fixed Background"
-                  onChange={val => setAttributes({ size: val })}
+                <PanelRow className="mt20">
+                  <Label className=''>{__('Size (px):', 'circle-progress')}</Label>
+                  <NumberControl
+                    onChange={val => setAttributes({ size: val })}
+                    value={size}
+                  />
+                </PanelRow>
+
+                <Label  className="mt20">{__('Start Angle:', 'circle-progress')}</Label>
+                <RangeControl value={startAngle} onChange={val => setAttributes({ startAngle: val })} max={1000} step={0.01} />
+
+                <Label>{__('duration:', 'circle-progress')}</Label>
+                {/* <NumberControl
+                  onChange={val => setAttributes({ animation.duration: val })}
+                value={duration}
+                /> */}
+                <NumberControl className="mb5"
+                  onChange={val => setAttributes({ ...attributes, animation: { ...attributes.animation, duration: val } })}
+                  value={duration}
                 />
 
-                <Label>{__('startAngle:', 'shape-divider')}</Label>
-                <RangeControl value={startAngle} onChange={val => setAttributes({ startAngle: val })} min={100} max={300} />
+                <ToggleControl
+                  className='mt20'
+                  label="Reverse"
+                  checked={reverse}
+                  onChange={val => setAttributes({ reverse: val })}
+                />
+
+                <Label>{__('Thick Ness:', 'circle-progress')}</Label>
+                <RangeControl value={thickness} onChange={val => setAttributes({ thickness: val })} min={1} max={14} />
+
 
                 <SelectControl
-                  label="Animation Scale"
+                  className='mt20'
+                  label="lineCap"
                   labelPosition="left"
-                  value={easing}
-                  options={easingOptions}
-                  onChange={(val) => setAttributes({ easing: parseInt(val) })}
+                  value={lineCap}
+                  options={lineCapOptions}
+                  onChange={(val) => setAttributes({ lineCap: val })}
                 />
                 {/* <TextControl
                   className="mt20"
@@ -132,7 +145,6 @@ const Settings = ({ attributes, setAttributes }) => {
                   label={__("Fill Color", "circle-progress")}
                   value={fill}
                   onChange={(val) => setAttributes({ fill: val })}
-                  defaultColor="#0000"
                 />
 
                 {/* <Typography

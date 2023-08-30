@@ -22,7 +22,7 @@
     },
     "value": {
       "type": "number",
-      "default": 1
+      "default": 0
     },
     "size": {
       "type": "number",
@@ -34,11 +34,11 @@
     },
     "reverse": {
       "type": "boolean",
-      "default": false
+      "default": true
     },
     "thickness": {
-      "type": "string",
-      "default": "auto"
+      "type": "number",
+      "default": 7
     },
     "lineCap": {
       "type": "string",
@@ -46,9 +46,7 @@
     },
     "fill": {
       "type": "object",
-      "default": {
-        "gradient": ["red", "orange"]
-      }
+      "default": "#4BF438"
     },
     "circleScale": {
       "type": "number",
