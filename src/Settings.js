@@ -22,8 +22,8 @@ const circleAlignments = [
 ];
 
 const Settings = ({ attributes, setAttributes }) => {
-  const { alignment, value, size, startAngle, reverse, thickness, lineCap, fill, circleScale, emptyFill, animation, insertMode } = attributes;
-  const { duration, easing } = animation;
+  const { alignment, value, size, startAngle, reverse, thickness, lineCap, fill, emptyFill, animation } = attributes;
+  const { duration } = animation;
 
   // console.log(easing);
 
@@ -51,8 +51,9 @@ const Settings = ({ attributes, setAttributes }) => {
                   />
                 </PanelRow>
 
-                <Label  className="mt20">{__('Start Angle:', 'circle-progress')}</Label>
-                <RangeControl value={startAngle} onChange={val => setAttributes({ startAngle: val })} max={1000} step={0.01} />
+                <Label className="mt20">{__('Start Angle (°):', 'circle-progress')}</Label>
+                <RangeControl value={startAngle} onChange={val => setAttributes({ startAngle: val })} min={0} max={360} step={1} />
+                <small>{__('Start angel 0 will start from the top', '')}</small>
 
                 <Label>{__('duration:', 'circle-progress')}</Label>
                 {/* <NumberControl
@@ -63,7 +64,6 @@ const Settings = ({ attributes, setAttributes }) => {
                   onChange={val => setAttributes({ ...attributes, animation: { ...attributes.animation, duration: val } })}
                   value={duration}
                 />
-
                 <ToggleControl
                   className='mt20'
                   label="Reverse"

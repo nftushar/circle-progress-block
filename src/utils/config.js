@@ -1,12 +1,11 @@
 export const circleProgressConfig = (attributes) => {
     const { value, size, startAngle, reverse, thickness, lineCap, fill, emptyFill, animation, insertMode } = attributes;
-    const { enabled, duration, easing, startAt } = animation;
+    const { enabled, duration, easing } = animation;
 
     return {
         value,
         size,
-        // startAngle,
-        startAngle: Math.PI * 1.5, // -0.5 to 1.5
+        startAngle: Math.PI * ((startAngle / 360) * 2 - 0.5),
         reverse,
         thickness,
         lineCap,

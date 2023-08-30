@@ -30,7 +30,7 @@
     },
     "startAngle": {
       "type": "number",
-      "default": -3.141592653589793
+      "default": 0
     },
     "reverse": {
       "type": "boolean",
@@ -48,10 +48,6 @@
       "type": "object",
       "default": "#4BF438"
     },
-    "circleScale": {
-      "type": "number",
-      "default": "100%"
-    },
     "emptyFill": {
       "type": "string",
       "default": "#000001"
@@ -59,15 +55,9 @@
     "animation": {
       "type": "object",
       "default": {
-        "enabled": true,
         "duration": 1200,
-        "easing": "circleProgressEasing",
         "startAt": 0
       }
-    },
-    "insertMode": {
-      "type": "string",
-      "default": "prepend"
     }
   },
   "example": {

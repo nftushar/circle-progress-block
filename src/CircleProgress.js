@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { circleProgressConfig } from "./utils/config";
 
+
 const $ = jQuery;
 
 const CircleProgress = ({ attributes, clientId }) => {
@@ -13,7 +14,7 @@ const CircleProgress = ({ attributes, clientId }) => {
         $(`#bBlocksCircleProgress-${clientId} .bBlocksCircleProgress .circleProgress`).circleProgress(circleProgressConfig(attributes));
     }, []);
 
-    return <div className="bBlocksCircleProgress">
+    return <div className="bBlocksCircleProgress" >
         <div className="circleProgress" />
     </div>
 }
