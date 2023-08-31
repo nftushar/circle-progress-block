@@ -8,7 +8,6 @@ export const initCircleProgress = (attributes, clientId) => {
     $(progressSl)
         .circleProgress(circleProgressConfig(attributes))
         .on('circle-animation-progress', function (event, progress,stepValue) {
-            console.log(progress);
             $(this).find('strong').html(parseInt(stepValue * 100) + '<i>%</i>');
         });
 
