@@ -80,20 +80,16 @@ const Settings = ({ attributes, setAttributes }) => {
 									onChange={val => setAttributes({ ...attributes, animation: { ...attributes.animation, enabled: val } })}
 								/>
 
-								{enabled && (
-									<>
-										<Label>{__('Duration:', 'circle-progress')}</Label>
-										<NumberControl className="mb5"
-											onChange={val => setAttributes({ animation: { ...animation, duration: val } })}
-											value={duration}
-										/>
-									</>
-								)}
+								<Label>{__('Duration:', 'circle-progress')}</Label>
+								<NumberControl className="mb5"
+									onChange={val => setAttributes({ animation: { ...animation, duration: val } })}
+									value={duration}
+								/>
 								<ToggleControl
 									className='mt20'
 									label="Percentage"
 									checked={percentage}
-									onChange={val => setAttributes({ elements: { ...elements, percentage: val } })}
+									onChange={val => setAttributes({  elements: { ...elements, percentage: val } })}
 								/>
 							</PanelBody>
 						)}
@@ -111,7 +107,7 @@ const Settings = ({ attributes, setAttributes }) => {
 									options={circleAlignments}
 									isCircle={true}
 								/>
-
+								
 								<BColor
 									label={__("Fill Color", "circle-progress")}
 									value={fill}

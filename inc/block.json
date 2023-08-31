@@ -57,12 +57,12 @@
     "alignment": {
       "type": "string",
       "default": "center"
-    },
+    }, 
     "fill": {
       "type": "object",
       "default": {
-        "type": "color",
-        "color":"#4527a4"
+        "type": "string",
+        "color":"linear-gradient(135deg,#12c2e9 0%,#c471ed 50%,#f64f59 100%)"
       }
     },
     "emptyFill": {

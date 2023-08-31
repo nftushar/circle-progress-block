@@ -12,11 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const attributes = JSON.parse(circleEl.dataset.attributes);
         const { cId } = attributes;
 
-        render(<>
-            <Style attributes={attributes} clientId={cId} />
+        render( <div id={`bBlocksCircleProgress-${cId}`}>
+                <Style attributes={attributes} clientId={cId} />
 
-            <CircleProgress attributes={attributes} clientId={cId} />
-        </>, circleEl);
+                <CircleProgress attributes={attributes} clientId={cId} />
+            </div>, circleEl );
 
         circleEl?.removeAttribute("data-attributes");
     });
