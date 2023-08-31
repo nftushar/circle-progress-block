@@ -1,7 +1,7 @@
 export const circleProgressConfig = (attributes) => {
     const { value, size, startAngle, reverse, thickness, lineCap, fill, emptyFill, animation, insertMode } = attributes;
-    const { enabled, duration, easing } = animation;
-
+    const { enabled, duration, startAt } = animation;
+    // console.log(enabled);
     return {
         value,
         size,
@@ -11,7 +11,7 @@ export const circleProgressConfig = (attributes) => {
         lineCap,
         fill,
         emptyFill,
-        animation: enabled ? { duration, easing } : false,
+        animation: enabled ? { duration } : false,
         // animationStartValue: enabled ? startAt : 0.0,
         animationStartValue: 0,
         insertMode

@@ -16,25 +16,13 @@
       "type": "string",
       "default": ""
     },
-    "alignment": {
-      "type": "string",
-      "default": "center"
-    },
     "value": {
       "type": "number",
-      "default": 0
+      "default": 0.75
     },
     "size": {
       "type": "number",
       "default": 100
-    },
-    "startAngle": {
-      "type": "number",
-      "default": 0
-    },
-    "reverse": {
-      "type": "boolean",
-      "default": true
     },
     "thickness": {
       "type": "number",
@@ -44,20 +32,42 @@
       "type": "string",
       "default": "butt"
     },
-    "fill": {
-      "type": "object",
-      "default": "#4BF438"
+    "startAngle": {
+      "type": "number",
+      "default": 0
     },
-    "emptyFill": {
-      "type": "string",
-      "default": "#000001"
+    "reverse": {
+      "type": "boolean",
+      "default": true
     },
     "animation": {
       "type": "object",
       "default": {
+        "enabled": true,
         "duration": 1200,
         "startAt": 0
       }
+    },
+    "elements": {
+      "type": "object",
+      "default": {
+        "percentage": true
+      }
+    },
+    "alignment": {
+      "type": "string",
+      "default": "center"
+    },
+    "fill": {
+      "type": "object",
+      "default": {
+        "type": "color",
+        "color":"#4527a4"
+      }
+    },
+    "emptyFill": {
+      "type": "string",
+      "default": "#000"
     }
   },
   "example": {

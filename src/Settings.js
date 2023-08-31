@@ -23,9 +23,9 @@ const circleAlignments = [
 
 const Settings = ({ attributes, setAttributes }) => {
   const { alignment, value, size, startAngle, reverse, thickness, lineCap, fill, emptyFill, animation } = attributes;
-  const { duration } = animation;
+  const { enabled, duration } = animation;
 
-  // console.log(easing);
+  console.log(enabled);
 
   return (
     <InspectorControls>
@@ -56,10 +56,6 @@ const Settings = ({ attributes, setAttributes }) => {
                 <small>{__('Start angel 0 will start from the top', '')}</small>
 
                 <Label>{__('duration:', 'circle-progress')}</Label>
-                {/* <NumberControl
-                  onChange={val => setAttributes({ animation.duration: val })}
-                value={duration}
-                /> */}
                 <NumberControl className="mb5"
                   onChange={val => setAttributes({ ...attributes, animation: { ...attributes.animation, duration: val } })}
                   value={duration}
@@ -70,9 +66,16 @@ const Settings = ({ attributes, setAttributes }) => {
                   checked={reverse}
                   onChange={val => setAttributes({ reverse: val })}
                 />
+                <ToggleControl
+                  className='mt20'
+                  label="Enable Animation"
+                  checked={enabled}
+                  onChange={val => setAttributes({ ...attributes, animation: { ...attributes.animation, enabled: val } })}
+                  // onChange={val => setAttributes({ enabled: val })}
+                />
 
-                <Label>{__('Thick Ness:', 'circle-progress')}</Label>
-                <RangeControl value={thickness} onChange={val => setAttributes({ thickness: val })} min={1} max={14} />
+                <Label>{__('Thickness:', 'circle-progress')}</Label>
+                <RangeControl value={thickness} onChange={val => setAttributes({ thickness: val })} min={1} max={100} />
 
 
                 <SelectControl
