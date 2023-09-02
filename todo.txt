@@ -1,0 +1,2 @@
+Need to understand Circle Gradient, 
+Files name: function.js, config.js, Gradient.js, Settings.js 

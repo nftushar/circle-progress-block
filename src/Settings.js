@@ -1,23 +1,19 @@
 import { __ } from "@wordpress/i18n";
-import { InspectorControls } from "@wordpress/block-editor";
-import { solidStar, outlineStar } from "./utils/icons";
-import produce from "immer";
+import { InspectorControls } from "@wordpress/block-editor"; 
 import {
 	ToggleControl,
 	PanelRow,
 	PanelBody,
-	TabPanel,
-	TextControl,
+	TabPanel, 
 	__experimentalNumberControl as NumberControl,
 	SelectControl,
 	RangeControl,
 } from "@wordpress/components";
 
-import { BColor, BtnGroup, Label, CustomController, ColorsControl } from "../../Components";
+import { BColor, BtnGroup, Label,  ColorsControl } from "../../Components";
 import { GradientPicker } from "@wordpress/components";
 import { gradients } from "../../Components/utils/options";
-
-// console.log(CustomController);
+ 
 
 const lineCapOptions = [
 	{ label: __("Round", "circle-progress"), value: "round" },
@@ -48,25 +44,12 @@ const fillTypes = [
 ]
 
 const Settings = ({ attributes, setAttributes }) => {
-	const {
-		alignment,
-		value,
-		size,
-		startAngle,
-		reverse,
-		thickness,
-		lineCap,
-		fill,
-		emptyFill,
-		animation,
-		elements,
-	} = attributes;
+	const { alignment, value, size, startAngle, reverse, thickness, lineCap, fill, emptyFill, animation, elements, } = attributes;
 
 	const { enabled, duration } = animation;
 	const { type: fillType, color: fillColor, gradient: fillGradient } = fill;
 	const { percentage } = elements;
-
-	console.log();
+ 
 
 	return (
 		<InspectorControls>
