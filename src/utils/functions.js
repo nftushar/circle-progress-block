@@ -10,7 +10,7 @@ export const initCircleProgress = (attributes, clientId) => {
         .on('circle-animation-progress', function (event, progress, stepValue) {
             $(this).find('strong').html(parseInt(stepValue * 100) + '<i>%</i>');
         });
- 
+
 }
 
 export const extractGradient = (str = '') => {
