@@ -1,2 +1,6 @@
 Need to understand Circle Gradient, 
 Files name: function.js, config.js, Gradient.js, Settings.js 
+
+
+Percentage  button not working 
+Create  Panal body name Elements, and the Show Percentage in there

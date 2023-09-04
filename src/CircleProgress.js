@@ -6,7 +6,7 @@ const CircleProgress = ({ attributes, clientId }) => {
         initCircleProgress(attributes, clientId);
     }, [attributes]);
 
-    return <div className="bBlocksCircleProgress" >
+    return <div className="bBlocksCircleProgress"  id={`bBlocksCircleProgress-${clientId}`}>
         <div className="circleProgress">
             <strong></strong>
         </div>

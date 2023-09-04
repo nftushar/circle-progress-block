@@ -9,12 +9,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-08-07T04:57:39+00:00\n"
+"POT-Creation-Date: 2023-09-03T09:01:45+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: circle-progress\n"
 
 #. Plugin Name of the plugin
+#: dist/editor.js:1
+#: dist/editor.js:527
 msgid "Circle Progress"
 msgstr ""
 
@@ -31,43 +33,98 @@ msgid "http://bplugins.com"
 msgstr ""
 
 #: dist/editor.js:1
-msgid "Settings"
+#: dist/editor.js:478
+msgid "Round"
 msgstr ""
 
 #: dist/editor.js:1
-msgid "Prefix"
+#: dist/editor.js:479
+msgid "butt"
 msgstr ""
 
 #: dist/editor.js:1
-msgid "Rating"
+#: dist/editor.js:480
+msgid "square"
 msgstr ""
 
 #: dist/editor.js:1
-msgid "Icon Style"
+#: dist/editor.js:485
+msgid "left"
 msgstr ""
 
 #: dist/editor.js:1
-msgid "Title"
+#: dist/editor.js:490
+msgid "center"
 msgstr ""
 
 #: dist/editor.js:1
-msgid "Gap"
+#: dist/editor.js:495
+msgid "right"
 msgstr ""
 
 #: dist/editor.js:1
+#: dist/editor.js:501
+msgid "Solid"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:502
+msgid "Gradient"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:532
+msgid "Value (%):"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:546
+msgid "Size (px):"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:553
+msgid "Thickness:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:569
+msgid "Start Angle (°):"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:600
+msgid "Duration:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:623
+msgid "Color Control:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:635
+msgid "Circle"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:639
 msgid "Alignment"
 msgstr ""
 
 #: dist/editor.js:1
-msgid "Text Color"
+#: dist/editor.js:648
+msgid "Fill:"
 msgstr ""
 
 #: dist/editor.js:1
-msgid "Text Typography"
+#: dist/editor.js:652
+msgid "Fill Color:"
 msgstr ""
 
 #: dist/editor.js:1
-msgid "Text Shadow"
+#: dist/editor.js:656
+msgid "Empty Fill Color"
 msgstr ""
 
 #: inc/block.json
@@ -87,7 +144,12 @@ msgstr ""
 
 #: inc/block.json
 msgctxt "block keyword"
-msgid "Rating"
+msgid "Circle"
+msgstr ""
+
+#: inc/block.json
+msgctxt "block keyword"
+msgid "Progress"
 msgstr ""
 
 #: inc/block.json
