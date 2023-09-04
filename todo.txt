@@ -2,5 +2,11 @@ Need to understand Circle Gradient,
 Files name: function.js, config.js, Gradient.js, Settings.js 
 
 
-Percentage  button not working 
-Create  Panal body name Elements, and the Show Percentage in there
+The Percentage  button not working 
+Create  Panal body name Elements and the Show Percentage in there
+regex 
+
+#   Let's emulate dynamic value update
+#   setTimeout(function () { c4.circleProgress('value', 0.7); }, 1000);
+#   setTimeout(function () { c4.circleProgress('value', 1.0); }, 1100);
+#   setTimeout(function () { c4.circleProgress('value', 0.5); }, 2100);

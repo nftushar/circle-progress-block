@@ -17,24 +17,12 @@ import { gradients } from "../../Components/utils/options";
 import { lineCapOptions, circleAlignments, fillTypes } from "./utils/options";
 
 const Settings = ({ attributes, setAttributes }) => {
-	const {
-		alignment,
-		value,
-		size,
-		startAngle,
-		reverse,
-		thickness,
-		lineCap,
-		fill,
-		emptyFill,
-		animation,
-		elements,
-	} = attributes;
+
+	const { alignment, value, size, startAngle, reverse, thickness, lineCap, fill, emptyFill, animation, elements, } = attributes;
 
 	const { enabled, duration } = animation;
 	const { type: fillType, color: fillColor, gradient: fillGradient } = fill;
 	const { showPercentage } = elements;
-// console.log(showPercentage);
 	return (
 		<InspectorControls>
 			<TabPanel
@@ -170,7 +158,7 @@ const Settings = ({ attributes, setAttributes }) => {
 									isCircle={true}
 								/>
 								<PanelRow className="mt20">
-									<Label className="">
+									<Label className="mt20">
 										{__("Fill Type:", "circle-progress")}
 									</Label>
 									<BtnGroup
