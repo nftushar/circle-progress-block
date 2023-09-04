@@ -51,7 +51,7 @@
     "elements": {
       "type": "object",
       "default": {
-        "percentage": true
+        "showPercentage": true
       }
     },
     "alignment": {
