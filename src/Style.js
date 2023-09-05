@@ -13,7 +13,7 @@ const Style = ({ attributes, clientId }) => {
             height: ${size}px;
         }
         ${mainSl} .bBlocksCircleProgress .circleProgress strong{
-            display: ${showPercentage ? 'none' : 'inline-block'};
+            display: ${showPercentage ? 'inline-block' : 'none'};
         }
     `}} />;
 };

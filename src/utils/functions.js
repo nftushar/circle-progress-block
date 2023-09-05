@@ -7,13 +7,14 @@ export const initCircleProgress = (attributes, clientId) => {
 
     $(progressSl)
         .circleProgress(circleProgressConfig(attributes))
-        .on('circle-animation-progress', function (event, progress, stepValue) {
-            $(this).find('strong').html(parseInt(stepValue * 100) + '<i>%</i>');
+        .on("circle-animation-progress", function (event, progress, stepValue) {
+            $(this)
+                .find("strong")
+                .html(parseInt(stepValue * 100) + "<i>%</i>");
         });
+};
 
-}
-
-export const extractGradient = (str = '') => {
+export const extractGradient = (str = "") => {
     const colorPattern = /rgba?\([^)]+\)|#[0-9a-fA-F]+|rgb\([^)]+\)/g;
 
     const colors = str.match(colorPattern);
@@ -25,11 +26,11 @@ export const extractGradient = (str = '') => {
     let angle = null;
 
     if (angleMatch) {
-        angle = parseInt(angleMatch[0].replace('deg', ''));
+        angle = parseInt(angleMatch[0].replace("deg", ""));
     }
 
     return {
         colors: colors || [],
         angle,
     };
-}
+};

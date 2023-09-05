@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     circleEls.forEach((circleEl) => {
         const attributes = JSON.parse(circleEl.dataset.attributes);
+        // console.log(attributes);
         const { cId } = attributes;
 
         render( <div id={`bBlocksCircleProgress-${cId}`}>

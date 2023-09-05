@@ -9,14 +9,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-09-05T04:57:28+00:00\n"
+"POT-Creation-Date: 2023-09-05T08:49:16+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: circle-progress\n"
 
 #. Plugin Name of the plugin
 #: dist/editor.js:1
-#: dist/editor.js:612
+#: dist/editor.js:611
 msgid "Circle Progress"
 msgstr ""
 
@@ -43,122 +43,117 @@ msgid "butt"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:555
-msgid "square"
-msgstr ""
-
-#: dist/editor.js:1
-#: dist/editor.js:560
+#: dist/editor.js:559
 msgid "left"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:565
+#: dist/editor.js:564
 msgid "center"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:570
+#: dist/editor.js:569
 msgid "right"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:576
+#: dist/editor.js:575
 msgid "Solid"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:577
+#: dist/editor.js:576
 msgid "Gradient"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:602
+#: dist/editor.js:601
 msgid "General"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:603
+#: dist/editor.js:602
 msgid "Style"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:617
+#: dist/editor.js:616
 msgid "Value (%):"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:631
+#: dist/editor.js:627
 msgid "Size (px):"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:638
+#: dist/editor.js:635
 msgid "Thickness:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:647
+#: dist/editor.js:644
 msgid "line Cap"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:654
+#: dist/editor.js:651
 msgid "Start Angle (°):"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:664
+#: dist/editor.js:661
 msgid "Start angel 0 will start from the top"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:669
+#: dist/editor.js:666
 msgid "Reverse"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:676
+#: dist/editor.js:673
 msgid "Enable Animation"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:687
-msgid "Duration:"
+#: dist/editor.js:684
+msgid "Duration(ms):"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:702
+#: dist/editor.js:699
 msgid "Element"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:705
+#: dist/editor.js:702
 msgid "Show Percentage"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:720
+#: dist/editor.js:717
 msgid "Circle"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:724
+#: dist/editor.js:721
 msgid "Alignment"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:732
+#: dist/editor.js:729
 msgid "Fill Type:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:754
+#: dist/editor.js:751
 msgid "Fill Color:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:763
+#: dist/editor.js:760
 msgid "Empty Fill Color"
 msgstr ""
 

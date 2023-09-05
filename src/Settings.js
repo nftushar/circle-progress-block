@@ -42,10 +42,7 @@ const Settings = ({ attributes, setAttributes }) => {
 										value={parseInt(value * 100)}
 										onChange={(val) =>
 											setAttributes({ value: Number((val / 100).toFixed(2)) })
-										}
-										min={0}
-										max={100}
-										step={1}
+										} min={0} max={100} step={1}
 									/>
 
 									<PanelRow className="mt20">
@@ -53,8 +50,9 @@ const Settings = ({ attributes, setAttributes }) => {
 											{__("Size (px):", "circle-progress")}
 										</Label>
 										<NumberControl
-											onChange={(val) => setAttributes({ size: val })}
+											onChange={(val) => setAttributes({ size: parseInt(val) })}
 											value={size}
+											min={10}
 										/>
 									</PanelRow>
 									<Label>{__("Thickness:", "circle-progress")}</Label>
@@ -106,7 +104,7 @@ const Settings = ({ attributes, setAttributes }) => {
 									/>
 									{enabled ? (
 										<>
-											<Label>{__("Duration:", "circle-progress")}</Label>
+											<Label>{__("Duration(ms):", "circle-progress")}</Label>
 											<NumberControl
 												className="mb5"
 												onChange={(val) =>
@@ -123,7 +121,7 @@ const Settings = ({ attributes, setAttributes }) => {
 									className="bPlPanelBody"
 									title={__("Element", "circle-progress")}
 								>
-									<ToggleControl 
+									<ToggleControl
 										label={__("Show Percentage", "circle-progress")}
 										checked={showPercentage}
 										onChange={(val) =>
