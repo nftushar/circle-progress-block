@@ -9,7 +9,7 @@ const CircleProgress = ({ attributes, clientId }) => {
     const [newSize, setNewSize] = useState(size);
 
     useEffect(() => {
-        const elSize = $(`#bBlocksCircleProgress-${clientId} .bBlocksCircleProgress`).width(); 
+        const elSize = $(`#bBlocksCircleProgress-${clientId} .bBlocksCircleProgress`).width();
         setNewSize(elSize < size ? elSize : size);
 
         if (newSize >= (thickness * 2)) {
