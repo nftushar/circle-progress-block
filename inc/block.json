@@ -62,14 +62,14 @@
       "type": "object",
       "default": {
         "type": "gradient",
-        "color": "#ff1e41",
+        "color": "#727B7B",
         "gradient": "linear-gradient(#4527a4 0%, #8344c5 100%)",
         "image": null
       }
     },
     "emptyFill": {
       "type": "string",
-      "default": "#000"
+      "default": "#DFEC4E"
     }
   },
   "example": {

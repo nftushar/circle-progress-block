@@ -1,14 +1,7 @@
 import { __ } from "@wordpress/i18n";
 import { InspectorControls } from "@wordpress/block-editor";
 import {
-	ToggleControl,
-	PanelRow,
-	PanelBody,
-	TabPanel,
-	__experimentalNumberControl as NumberControl,
-	SelectControl,
-	RangeControl,
-	GradientPicker,
+	ToggleControl, PanelRow, PanelBody, TabPanel, __experimentalNumberControl as NumberControl, SelectControl, RangeControl, GradientPicker,
 } from "@wordpress/components";
 
 import { BColor, BtnGroup, Label } from "../../Components";
@@ -18,7 +11,7 @@ import { lineCapOptions, circleAlignments, fillTypes } from "./utils/options";
 
 const Settings = ({ attributes, setAttributes }) => {
 
-	const { alignment, value, size, startAngle, reverse, thickness, lineCap, fill, emptyFill, animation, elements, } = attributes;
+	const { alignment, value, size, startAngle, reverse, thickness, fill, emptyFill, lineCap, animation, elements, } = attributes;
 
 	const { enabled, duration } = animation;
 	const { type: fillType, color: fillColor, gradient: fillGradient } = fill;
@@ -28,8 +21,8 @@ const Settings = ({ attributes, setAttributes }) => {
 			<TabPanel
 				className="bPlTabPanel"
 				tabs={[
-					{ name: "general", title: __("General") },
-					{ name: "style", title: __("Style") },
+					{ name: "general", title: __("General", "circle-progress") },
+					{ name: "style", title: __("Style", "circle-progress") }
 				]}
 			>
 				{(tab) => (
@@ -73,7 +66,7 @@ const Settings = ({ attributes, setAttributes }) => {
 									/>
 									<SelectControl
 										className="mt20"
-										label="lineCap"
+										label={__("line Cap", "circle-progress")}
 										labelPosition="left"
 										value={lineCap}
 										options={lineCapOptions}
@@ -90,19 +83,19 @@ const Settings = ({ attributes, setAttributes }) => {
 										step={1}
 									/>
 									<small>
-										{__("Start angel 0 will start from the top", "")}
+										{__("Start angel 0 will start from the top", "circle-progress")}
 									</small>
 
 									<ToggleControl
 										className="mt20"
-										label="Reverse"
+										label={__("Reverse", "circle-progress")}
 										checked={reverse}
 										onChange={(val) => setAttributes({ reverse: val })}
 									/>
 
 									<ToggleControl
 										className="mt20"
-										label="Enable Animation"
+										label={__("Enable Animation", "circle-progress")}
 										checked={enabled}
 										onChange={(val) =>
 											setAttributes({
@@ -126,13 +119,12 @@ const Settings = ({ attributes, setAttributes }) => {
 										</>
 									) : null}
 								</PanelBody>
-								<PanelBody initialOpen="false"
+								<PanelBody initialOpen={false}
 									className="bPlPanelBody"
 									title={__("Element", "circle-progress")}
 								>
-									<ToggleControl
-										className="mt20"
-										label="Show Percentage"
+									<ToggleControl 
+										label={__("Show Percentage", "circle-progress")}
 										checked={showPercentage}
 										onChange={(val) =>
 											setAttributes({

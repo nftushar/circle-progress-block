@@ -14,7 +14,7 @@ export const circleProgressConfig = (attributes) => {
         thickness,
         lineCap,
         fill: 'gradient' === fillType ? { gradient: extractGradient(fillGradient).colors, gradientAngle: Math.PI * ((extractGradient(fillGradient).angle / 360) * 2 - 0.5) } : fillColor,
-        emptyFill,
+        emptyFill,  
         animation: enabled ? { duration } : false,
         animationStartValue: enabled ? startAt : 0.0,
         // animationStartValue: 0,
