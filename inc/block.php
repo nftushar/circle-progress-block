@@ -14,7 +14,7 @@ class BBlocksCircleProgress{
 		wp_register_style( 'b-blocks-circle-progress-editor-style', plugin_dir_url( __DIR__ ) . 'dist/editor.css', [ 'b-blocks-circle-progress-style' ], B_BLOCKS_VERSION ); // Backend Style
 
 		register_block_type( __DIR__, [
-			'editor_style'		=> 'b-blocks-circle-progress-editor-stylthicknesse',
+			'editor_style'		=> 'b-blocks-circle-progress-editor-style',
 			'render_callback'	=> [$this, 'render']
 		] ); // Register Block
 

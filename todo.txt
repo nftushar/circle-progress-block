@@ -6,7 +6,7 @@ The Percentage  button not working
 Create  Panal body name Elements and the Show Percentage in there
 regex,
 
-register_block_type Need To understand;  
+register_block_type & wp_register_style Need To understand;  
 max-width should be 100% in CircleProgress I didn't understand
  
 #   Let's emulate dynamic value update
